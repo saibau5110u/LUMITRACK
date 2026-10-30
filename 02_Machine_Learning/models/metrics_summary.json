@@ -1,0 +1,137 @@
+{
+  "dataset_samples": 600,
+  "train_samples": 480,
+  "test_samples": 120,
+  "feature_count": 13,
+  "feature_names": [
+    "peak_intensity",
+    "peak_angle_deg",
+    "min_intensity",
+    "mean_intensity",
+    "std_intensity",
+    "curve_asymmetry",
+    "gradient_mean",
+    "gradient_max",
+    "contrast_ratio",
+    "exposure_integral",
+    "ratio_to_target",
+    "ratio_to_ambient",
+    "partial_slope"
+  ],
+  "cross_validation_scores_macro_f1": {
+    "Ridge Logistic Regression": 0.986001576950944,
+    "Random Forest Classifier": 0.9929776669650087,
+    "Gradient Boosting Classifier": 0.9835320050338204
+  },
+  "selected_best_model": "Random Forest Classifier",
+  "comparison_table": [
+    {
+      "model_name": "Ridge Logistic Regression",
+      "is_binary_baseline": false,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "macro_f1": 1.0,
+      "overexposure_recall": 1.0,
+      "overexposure_false_alarm": 0.0,
+      "confusion_matrix": [
+        [
+          49,
+          0,
+          0
+        ],
+        [
+          0,
+          43,
+          0
+        ],
+        [
+          0,
+          0,
+          28
+        ]
+      ]
+    },
+    {
+      "model_name": "Random Forest Classifier",
+      "is_binary_baseline": false,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "macro_f1": 1.0,
+      "overexposure_recall": 1.0,
+      "overexposure_false_alarm": 0.0,
+      "confusion_matrix": [
+        [
+          49,
+          0,
+          0
+        ],
+        [
+          0,
+          43,
+          0
+        ],
+        [
+          0,
+          0,
+          28
+        ]
+      ]
+    },
+    {
+      "model_name": "Gradient Boosting Classifier",
+      "is_binary_baseline": false,
+      "accuracy": 0.9833,
+      "precision": 0.9813,
+      "recall": 0.9813,
+      "macro_f1": 0.9813,
+      "overexposure_recall": 1.0,
+      "overexposure_false_alarm": 0.0,
+      "confusion_matrix": [
+        [
+          48,
+          0,
+          1
+        ],
+        [
+          0,
+          43,
+          0
+        ],
+        [
+          1,
+          0,
+          27
+        ]
+      ]
+    },
+    {
+      "model_name": "Rule-Based Baseline",
+      "is_binary_baseline": true,
+      "accuracy": 0.7667,
+      "precision": 0.5141,
+      "recall": 0.6667,
+      "macro_f1": 0.5786,
+      "overexposure_recall": 1.0,
+      "overexposure_false_alarm": 0.2597,
+      "confusion_matrix": [
+        [
+          49,
+          0,
+          0
+        ],
+        [
+          0,
+          43,
+          0
+        ],
+        [
+          8,
+          20,
+          0
+        ]
+      ]
+    }
+  ]
+}
